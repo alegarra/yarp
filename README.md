@@ -22,13 +22,13 @@ This program takes `file1`, creates a list of animals, and prints out records in
 * It takes the pedigree file and put ancestors animals in the first column if they are absent (unless they <=0), 
 * It also assigns year of birth (needed to create upg) for missing animals, here yob = yob(progeny)-3 
 
-###extract_duplicates.awk
+### extract_duplicates.awk
 Remove duplicates and individuals with two identical parents
 
-###renum_order.awk			
+### renum_order.awk			
 Renumbers the pedigree on `file1` so that parents precede offspring. Conceived for populations with no unknown parent groups, so missing ancestors are 0. On output, it generates `fileout` with 6 cols, the new and the old pedigree.
 
-###renum_order_gen.awk		
+### renum_order_gen.awk		
 Same as above but considering pseudo-generation numbers, so that uncles got numbers before nieces; see Kempthorne's example in which Z may, or may not, be numbered before F.
 	
 	A 0 0
@@ -38,7 +38,7 @@ Same as above but considering pseudo-generation numbers, so that uncles got numb
 	F B E
 	Z A B
 
-###assign_UPGs_sire_dam.awk
+### assign_UPGs_sire_dam.awk
 It assings unknown parent groups based on year of birth and kind of missingness (both unknown or only sire unknown). In this case, for Manech Tete Rousse.
 
 ### renum_order_groups.awk
