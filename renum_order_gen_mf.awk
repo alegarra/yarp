@@ -27,7 +27,6 @@ BEGIN{
 	dam[$1]=$2
 	sire[$1]=$3
 	included[$1]=0
-	gen[$1]=9999
 }
 END{
     printf("%10s%10s\n",NR,"animals") > "/dev/stderr" 
